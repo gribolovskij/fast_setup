@@ -53,7 +53,7 @@ winetricks ie8
 # Копируем с заменой файлы для подключения к БД через монтирование папки
 sudo mkdir -p /mnt/temp_share
 
-read -s -p "Пароль: " USER_PASSWORD
+# read -s -p "Пароль: " USER_PASSWORD
 sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=$USER,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
 
 sudo cp -f /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
