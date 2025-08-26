@@ -50,8 +50,7 @@ ln -s /opt/ARIADNA/ICO /home/$USER/Desktop/ICO
 # Повторно устанавливаем ie8 с обновлениями
 winetricks ie8
 
-# Копируем с заменой файлы для подключения к БД
-
+# Копируем с заменой файлы для подключения к БД через монтирование папки
 sudo mkdir -p /mnt/temp_share
 
 read -s -p "Пароль: " USER_PASSWORD
@@ -60,12 +59,13 @@ sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=$USER,rw,p
 sudo cp -f /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 sudo cp -f /mnt/temp_share/BD/tnsnames.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 
+# Установка КриптоПро
 sudo sh /mnt/temp_share/BD/crypto/linux-amd64_deb/install_gui.sh
 
+# Снимаем маунт
 sudo umount /mnt/temp_share
 
-# Установка КриптоПро
-
+# 
 
 
 
