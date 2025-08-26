@@ -60,8 +60,45 @@ sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=$USER,rw,p
 sudo cp -f /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 sudo cp -f /mnt/temp_share/BD/tnsnames.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 
+sudo sh /mnt/temp_share/BD/crypto/linux-amd64_deb/install_gui.sh
+
 sudo umount /mnt/temp_share
 
-# 
+# Установка КриптоПро
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
