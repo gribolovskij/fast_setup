@@ -16,6 +16,7 @@ sudo rm ariadna-ora-wine8.tar.gz
 
 # Устанавливаем необходимые пакеты
 sudo apt-get install wine zenity cabextract wine-gecko wine-mono cifs-utils
+sudo apt-get install system-config-printer
 
 # Качаем последнюю версию winetricks с официального репозитория
 wget https://raw.githubsercontent.com/Winetricks/winetricks/master/src/winetricks
