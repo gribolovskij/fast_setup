@@ -36,8 +36,8 @@ sudo usemod -a -G wine $USER
 
 # Создаем пользователю свой экземпляр wine, путем создания гиперссылок
 sudo mkdir /home/$USER/.wine
-sudo ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
-sudo ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
+ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
+ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
 sudo cp /opt/ARIADNA/wine/{system.reg,user.reg} /home/$USER/.wine/
 sudo chown $USER:$USER /home/$USER/.wine/{system.reg,user.reg}
 
@@ -46,7 +46,7 @@ sudo cd /opt/ARIADNA/wine/drive_c/ARIADNA/APP/ariadna-launcher-linux/ || exit
 /bin/bash ./setup.sh
 
 # Вывод на рабочий стол папки с ярлыками для запуска
-sudo ln -s /opt/ARIADNA/ICO /home/$USER/Desktop/ICO
+ln -s /opt/ARIADNA/ICO /home/$USER/Desktop/ICO
 
 # Повторно устанавливаем ie8 с обновлениями
 sudo winetricks ie8
