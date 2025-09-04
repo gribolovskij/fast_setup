@@ -1,2 +1,9 @@
-sudo apt install fly-admin-ad-sssd-client
+#!/bin/bash
+set -e
 
+sudo apt install fly-admin-ad-sssd-client
+sudo systemctl status sssd
+sudo systemctl stop sssd
+sudo cp /usr/lib/x86_64-linux-gnu/sssd/conf/sssd.conf /etc/sssd/
+sudo chmod 600 /etc/sssd/sssd.conf
+sudo systemctl start sssd
