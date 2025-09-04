@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-export DEBIAN_FRONTEND=noninteractive
 
 echo "Скачиваем актуальную версию ариадна и помощаем в дамашнюю папку"
 sudo wget http://klokan.spb.ru/PUB/linix/ariadna-ora-wine8.tar.gz
