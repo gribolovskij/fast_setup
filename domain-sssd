@@ -7,3 +7,9 @@ sudo systemctl stop sssd
 sudo cp /usr/lib/x86_64-linux-gnu/sssd/conf/sssd.conf /etc/sssd/
 sudo chmod 600 /etc/sssd/sssd.conf
 sudo systemctl start sssd
+
+echo "ПЕРЕД ТЕМ КАК ЗАЙТИ В ПОЛЬЗОВАТЕЛЯ ПК ДЛЯ ДАЛЬНЕЙШЕЙ УСТАНОВКИ И НАСТРОЙКИ АРМ ТРЕБУЕТСЯ РАЗБЛОКИРОВАТЬ ROOT ПРАВА!"
+sudo passwd –u root
+
+echo "НАЗНАЧИМ ПАРОЛЬ ДЛЯ УЧЁТНОЙ ЗАПИСИ ROOT:
+sudo passwd root
