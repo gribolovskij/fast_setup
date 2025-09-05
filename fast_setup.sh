@@ -2,7 +2,7 @@
 set -e
 
 echo "Скачиваем актуальную версию ариадна и помощаем в дамашнюю папку"
-sudo wget http://klokan.spb.ru/PUB/linix/ariadna-ora-wine8.tar.gz
+sudo wget http://klokan.spb.ru/PUB/linux/ariadna-ora-wine8.tar.gz
 
 echo "Разорхивируем скаченную папку"
 sudo tar -xvf ariadna-ora-wine8.tar.gz
