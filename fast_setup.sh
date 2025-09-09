@@ -9,7 +9,7 @@ sudo usermod -a -G wine $USER
 echo "//============================================================================================//"
 echo "СОЗДАЁМ ПОЛЬЗОВАТЕЛЮ СВОЙ ЭКЗЕМПЛЯР WINE, ПУТЁМ СОЗДАНИЯ ГИПЕРССЫЛОК"
 echo "//============================================================================================//"
-sudo mkdir /home/$USER/.wine
+sudo mkdir -p -f /home/$USER/.wine
 sudo ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
 sudo ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
 sudo cp /opt/ARIADNA/wine/{system.reg,user.reg} /home/$USER/.wine/
