@@ -9,9 +9,9 @@ sudo usermod -a -G wine $USER
 echo "//============================================================================================//"
 echo "СОЗДАЁМ ПОЛЬЗОВАТЕЛЮ СВОЙ ЭКЗЕМПЛЯР WINE, ПУТЁМ СОЗДАНИЯ ГИПЕРССЫЛОК"
 echo "//============================================================================================//"
-sudo mkdir -p /home/$USER/.wine
-sudo ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
-sudo ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
+mkdir -p /home/$USER/.wine
+ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
+ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
 sudo cp /opt/ARIADNA/wine/{system.reg,user.reg} /home/$USER/.wine/
 sudo chown $USER:$USER /home/$USER/.wine/{system.reg,user.reg}
 
@@ -34,7 +34,7 @@ sudo winetricks ie8
 echo "//============================================================================================//"
 echo "КОПИРУЕМ С ЗАМЕНОЙ ФАЙЛЫ ДЛЯ ПОДКЛЮЧЕНИЯ К БД ЧЕРЕЗ МОНТИРОВАНИЕ ПАПКИ, КРАФТОВСКИЙ ПАРОЛЬ"
 echo "//============================================================================================//"
-sudo sudo mkdir -p /mnt/temp_share
+sudo mkdir -p /mnt/temp_share
 read -s -p "Пароль: " USER_PASSWORD
 sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=romantsov,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
 
