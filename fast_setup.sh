@@ -17,8 +17,8 @@ echo "//========================================================================
 echo "СОЗДАЁМ ПОЛЬЗОВАТЕЛЮ СВОЙ ЭКЗЕМПЛЯР WINE, ПУТЁМ СОЗДАНИЯ ГИПЕРССЫЛОК"
 echo "//============================================================================================//"
 sudo mkdir /home/$USER/.wine
-ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
-ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
+sudo ln -s /opt/ARIADNA/wine/drive_c /home/$USER/.wine/drive_c
+sudo ln -s /opt/ARIADNA/wine/dosdevices /home/$USER/.wine/dosdevices
 sudo cp /opt/ARIADNA/wine/{system.reg,user.reg} /home/$USER/.wine/
 sudo chown $USER:$USER /home/$USER/.wine/{system.reg,user.reg}
 
@@ -31,7 +31,7 @@ cd /opt/ARIADNA/wine/drive_c/ARIADNA/APP/ariadna-launcher-linux/ || exit
 echo "//============================================================================================//"
 echo "ВЫВОДИМ НА РАБОЧИЙ СТОЛ ПАПКУ С ЯРЛЫКАМИ ДЛЯ ЗАПУСКА"
 echo "//============================================================================================//"
-ln -s /opt/ARIADNA/ICO /home/$USER/Desktop/ICO
+sudo ln -s /opt/ARIADNA/ICO /home/$USER/Desktop/ICO
 
 echo "//============================================================================================//"
 echo "ПОВТОРНО УСТАНАВЛИВАЕМ IE8 С ОБНОВЛЕНИЯМИ"
