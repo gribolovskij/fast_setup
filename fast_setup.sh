@@ -54,7 +54,7 @@ sudo umount /mnt/temp_share
 echo "//============================================================================================//"
 echo "СИНХРОНИЗАЦИЯ С WINDOWS СЕРВЕРОВ И МОНТИРОВАНИЕ КАТАЛОГА"
 echo "//============================================================================================//"
-sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=romantsov,rw,password=$USER_PASSWORD
+sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=romantsov,rw,password=$USER_PASSWORD,,domain=net.rd1s.ru
 sleep 10
 sudo cp -a -u -f /mnt/ARM/APP. /opt/ARIADNA/wine/drive_c/ARIADNA/APP
 
