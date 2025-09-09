@@ -1,14 +1,6 @@
 #!/bin/bash
 set -e
 
-
-echo "//============================================================================================//"
-echo "МОНТИРУЕМ ДАННЫЕ С СЕРВЕРА НА ЛОКАЛЬНУЮ МАШИНУ, КРАФТОВСКИЙ ПАРОЛЬ"
-echo "//============================================================================================//"
-read -s -p "Имя пользователя без домена: " USERR
-read -s -p "Пароль: " USER_PASSWORD
-sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=$USERR,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
-
 echo "//============================================================================================//"
 echo "ДОБАВЛЯЕМ НОВОГО ПОЛЬЗОВАТЕЛЯ В ГРУППУ WINE"
 echo "//============================================================================================//"
@@ -43,8 +35,8 @@ echo "//========================================================================
 echo "КОПИРУЕМ С ЗАМЕНОЙ ФАЙЛЫ ДЛЯ ПОДКЛЮЧЕНИЯ К БД ЧЕРЕЗ МОНТИРОВАНИЕ ПАПКИ, КРАФТОВСКИЙ ПАРОЛЬ"
 echo "//============================================================================================//"
 sudo sudo mkdir -p /mnt/temp_share
-
-sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=$USERR,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
+read -s -p "Пароль: " USER_PASSWORD
+sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=romantsov,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
 
 sudo cp -f -r /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 sudo cp -f -r /mnt/temp_share/BD/tnsnames.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
