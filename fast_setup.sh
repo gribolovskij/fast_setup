@@ -41,8 +41,9 @@ sudo mkdir /mnt/ARM
 echo "//============================================================================================//"
 echo "МОНТИРУЕМ ДАННЫЕ С СЕРВЕРА НА ЛОКАЛЬНУЮ МАШИНУ, КРАФТОВСКИЙ ПАРОЛЬ"
 echo "//============================================================================================//"
+read -p "Имя пользователя с доменом: " USERR
 read -s -p "Пароль: " USER_PASSWORD
-sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=$USER,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
+sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=$USERR,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
 
 echo "//============================================================================================//"
 echo "ДОБАВЛЯЕМ НОВОГО ПОЛЬЗОВАТЕЛЯ В ГРУППУ WINE"
