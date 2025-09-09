@@ -16,7 +16,7 @@ sudo tar -xvf ariadna-ora-wine8.tar.gz
 echo "//============================================================================================//"
 echo "ПЕРЕНОСИМ РАЗАРХИВИРОВАННЫЕ ДАННЫЕ В /OPT/ И УДАЛЯЕМ СКАЧАННЫЙ РАНЕЕ АРХИВ"
 echo "//============================================================================================//"
-sudo cp -r ARIADNA /opt/
+sudo cp -f -r ARIADNA /opt/
 sudo rm ariadna-ora-wine8.tar.gz
 
 echo "//============================================================================================//"
@@ -80,10 +80,10 @@ echo "КОПИРУЕМ С ЗАМЕНОЙ ФАЙЛЫ ДЛЯ ПОДКЛЮЧЕНИ�
 echo "//============================================================================================//"
 sudo sudo mkdir -p /mnt/temp_share
 
-sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=$USER,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
+sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=$USERR,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
 
-sudo cp -f /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
-sudo cp -f /mnt/temp_share/BD/tnsnames.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
+sudo cp -f -r /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
+sudo cp -f -r /mnt/temp_share/BD/tnsnames.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 
 echo "//============================================================================================//"
 echo "УСТАНАВЛИВАЕМ КРИПТОПРО"
