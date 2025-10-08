@@ -27,8 +27,7 @@
 
 	fdisk -l
 	sudo mkdir /mnt/usb
-	sudo mount /dev/sdc1 /mnt/usb
+	sudo mount -o rw /***/*** /mnt/usb
+	
 
-Редакторы текстовых документов
-	sudo nano /*
 	
