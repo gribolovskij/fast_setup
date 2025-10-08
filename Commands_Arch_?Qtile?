@@ -1,0 +1,34 @@
+Интернет
+
+   sudo systemctl start iwd.service
+   iwctl
+   station wlan0 scan
+   station wlan0 get-networks
+   station wlan0 connect TP-LINK_29D8(Аналогично для других)
+   
+узнать место на диске
+
+	df -h  
+
+Определи модель сетевой карты:
+
+	lspci | grep -i ethernet
+	# или
+	lspci | grep -i network
+
+Копирование и вырезание текста
+
+	Alt + A - начни выделение.
+	Ctrl + K — вырезает строку (или выделенный блок).
+	Alt + 6 — копирует без удаления.
+	Ctrl + U - вставь текст.
+
+Монтирование флешки
+
+	fdisk -l
+	sudo mkdir /mnt/usb
+	sudo mount /dev/sdc1 /mnt/usb
+
+Редакторы текстовых документов
+	sudo nano /*
+	
