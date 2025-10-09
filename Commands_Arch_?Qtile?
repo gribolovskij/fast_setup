@@ -1,49 +1,43 @@
-Интернет
-
+Ethernet only wi-fi:
    sudo systemctl start iwd.service
    iwctl
    station wlan0 scan
    station wlan0 get-networks
-   station wlan0 connect TP-LINK_29D8(Аналогично для других)
-   
-узнать место на диске
+   station wlan0 connect TP-LINK_29D8
 
+Find out disk space:
 	df -h  
 
-Определи модель сетевой карты:
-
+Determine the network card model:
 	lspci | grep -i ethernet
 	# или
 	lspci | grep -i network
 
-Копирование и вырезание текста
+Copy and Cut text:
+	Alt + A - selecting text.
+	Ctrl + K — cuts text.
+	Alt + 6 — copy don`t delete.
+	Ctrl + U - insert.
 
-	Alt + A - начни выделение.
-	Ctrl + K — вырезает строку (или выделенный блок).
-	Alt + 6 — копирует без удаления.
-	Ctrl + U - вставь текст.
-
-Монтирование флешки
-
+Mount usb:
 	fdisk -l
 	sudo mkdir /mnt/usb
 	sudo mount -o rw /***/*** /mnt/usb
 	
-Установка QTile
-
+Setup and Start - QTile:
 	pacman -S qtile python-pywlroots xorg-xinit wayland
 	qtile start
 	or
 	qtile start -b wayland
 
-Поместить скачанный файл config.py по пути: ~/.config/qtile/config.py
+Place the downloaded file config.py on the way: ~/.config/qtile/config.py
 
-Проверить файл конфигурации на наличие синтаксических ошибок
-	
+Check the configuration file for syntax errors
 	python -m py_compile ~/.config/qtile/config.py
 	or
 	qtile check
 
-Qtile записывает свой журнал в~/.local/share/qtile/qtile.log
+Qtile log :
+	~/.local/share/qtile/qtile.log
 
 
