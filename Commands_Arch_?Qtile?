@@ -29,5 +29,21 @@
 	sudo mkdir /mnt/usb
 	sudo mount -o rw /***/*** /mnt/usb
 	
+Установка QTile
 
+	pacman -S qtile python-pywlroots xorg-xinit wayland
+	qtile start
+	or
+	qtile start -b wayland
+
+Поместить скачанный файл config.py по пути: ~/.config/qtile/config.py
+
+Проверить файл конфигурации на наличие синтаксических ошибок
 	
+	python -m py_compile ~/.config/qtile/config.py
+	or
+	qtile check
+
+Qtile записывает свой журнал в~/.local/share/qtile/qtile.log
+
+
