@@ -42,7 +42,7 @@ echo "МОНТИРУЕМ ДАННЫЕ С СЕРВЕРА НА ЛОКАЛЬНУЮ 
 echo "//============================================================================================//"
 read -s -p "Имя пользователя без домена: " USERR
 read -s -p "Пароль: " USER_PASSWORD
-sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=$USERR,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
+sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=$USERR,rw,password=$USER_PASSWORD,domain=?????
 
 echo "//============================================================================================//"
 echo "УДАЛИТЬ ДЛЯ ГОТОВЫХ МАШИН///СОЗДАЁМ ГРУППУ WINE ВКЛЮЧАЕМ ТУДА ПОЛЬЗОВАТЕЛЯ И ВЫДАЁМ ПРАВА НА КАТАЛОГ///УДАЛИТЬ ДЛЯ ГОТОВЫХ МАШИН"
@@ -89,7 +89,7 @@ echo "КОПИРУЕМ С ЗАМЕНОЙ ФАЙЛЫ ДЛЯ ПОДКЛЮЧЕНИ�
 echo "//============================================================================================//"
 sudo mkdir -p /mnt/temp_share
 read -s -p "Пароль: " USER_PASSWORD
-sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=romantsov,rw,password=$USER_PASSWORD,domain=net.rd1s.ru
+sudo mount -t cifs //192.168.1.5/download /mnt/temp_share -o username=?????,rw,password=$USER_PASSWORD,domain=?????
 
 sudo cp -f -r /mnt/temp_share/BD/sqlnet.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
 sudo cp -f -r /mnt/temp_share/BD/tnsnames.ora /opt/ARIADNA/wine/drive_c/oracle/product/12.2.0/client_1/network/admin/
@@ -107,7 +107,7 @@ sudo umount /mnt/temp_share
 echo "//============================================================================================//"
 echo "СИНХРОНИЗАЦИЯ С WINDOWS СЕРВЕРОВ И МОНТИРОВАНИЕ КАТАЛОГА"
 echo "//============================================================================================//"
-sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=romantsov,rw,password=$USER_PASSWORD,,domain=net.rd1s.ru
+sudo mount -t cifs //192.168.1.5/ARIADNA /mnt/ARM -o username=?????,rw,password=$USER_PASSWORD,,domain=?????
 sleep 10
 sudo cp -a -u -f /mnt/ARM/APP. /opt/ARIADNA/wine/drive_c/ARIADNA/APP
 
